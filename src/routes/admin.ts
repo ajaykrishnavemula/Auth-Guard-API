@@ -36,4 +36,3 @@ router.get('/users/:userId/activity', getUserActivity);
 
 export default router;
 
-// Made with Bob

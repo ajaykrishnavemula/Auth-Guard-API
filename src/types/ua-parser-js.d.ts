@@ -60,4 +60,3 @@ declare module 'ua-parser-js' {
   export = UAParser;
 }
 
-// Made with Bob

@@ -18,4 +18,3 @@ const asyncWrapper = (fn: AsyncRequestHandler) => {
 
 export default asyncWrapper;
 
-// Made with Bob

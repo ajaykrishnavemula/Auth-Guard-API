@@ -51,4 +51,3 @@ router.post('/disable-2fa', disableTwoFactor);
 
 export default router;
 
-// Made with Bob

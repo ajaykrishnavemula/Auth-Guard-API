@@ -18,4 +18,3 @@ const rateLimiter = rateLimit({
 
 export default rateLimiter;
 
-// Made with Bob

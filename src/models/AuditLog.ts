@@ -213,4 +213,3 @@ const UserSession = mongoose.model<IUserSession>('UserSession', UserSessionSchem
 
 export { AuditLog, SecurityEvent, UserSession };
 
-// Made with Bob

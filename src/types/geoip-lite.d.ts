@@ -18,4 +18,3 @@ declare module 'geoip-lite' {
   };
 }
 
-// Made with Bob

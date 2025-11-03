@@ -311,4 +311,3 @@ function detectSuspiciousPatterns(req: Request): Array<SecurityPattern> {
   return patterns;
 }
 
-// Made with Bob

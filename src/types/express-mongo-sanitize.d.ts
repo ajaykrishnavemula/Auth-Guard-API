@@ -11,4 +11,3 @@ declare module 'express-mongo-sanitize' {
   export = mongoSanitize;
 }
 
-// Made with Bob

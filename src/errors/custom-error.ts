@@ -54,4 +54,3 @@ export class TooManyRequestsError extends CustomAPIError {
 
 export default CustomAPIError;
 
-// Made with Bob

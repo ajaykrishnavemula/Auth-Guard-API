@@ -822,4 +822,3 @@ export const githubCallback = asyncWrapper(async (req: Request, res: Response, n
   })(req, res, next);
 });
 
-// Made with Bob

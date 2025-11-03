@@ -150,4 +150,3 @@ class EmailService {
 
 export default new EmailService();
 
-// Made with Bob

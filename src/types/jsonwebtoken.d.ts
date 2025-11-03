@@ -32,4 +32,3 @@ declare module 'jsonwebtoken' {
   ): any;
 }
 
-// Made with Bob

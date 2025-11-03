@@ -97,4 +97,3 @@ export const requireVerifiedEmail = async (
 
 export default authenticateUser;
 
-// Made with Bob

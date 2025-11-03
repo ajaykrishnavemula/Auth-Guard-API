@@ -262,4 +262,3 @@ UserSchema.methods.isLocked = function (): boolean {
 
 export default mongoose.model<IUser>('User', UserSchema);
 
-// Made with Bob
