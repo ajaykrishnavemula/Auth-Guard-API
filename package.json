@@ -1,7 +1,7 @@
 {
-  "name": "authguard-api",
+  "name": "auth-guard-api",
   "version": "1.0.0",
-  "description": "AuthGuardAPI - Advanced authentication service with JWT, OAuth, and 2FA",
+  "description": "Auth-Guard-API - Advanced authentication service with JWT, OAuth, and 2FA",
   "main": "dist/app.js",
   "scripts": {
     "build": "tsc",
