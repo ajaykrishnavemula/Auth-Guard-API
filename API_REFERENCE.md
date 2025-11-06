@@ -1,4 +1,4 @@
-# Auth-Guard-API - Complete API Reference
+# Auth-Guard - Complete API Reference
 
 > **Comprehensive API documentation for the Authentication & Authorization System**
 

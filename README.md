@@ -1,324 +1,423 @@
-# 🔐 Auth-Guard-API - Enterprise Authentication System
+<div align="center">
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)](https://expressjs.com/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+# 🔐 Auth-Guard
 
-> 🔐 Enterprise authentication system with JWT, OAuth (Google/GitHub), 2FA, and role-based access control. Features email verification, password reset, and session management. Built with Express & MongoDB. Production-ready security! 🛡️
+### 🛡️ Enterprise-Grade Authentication System
 
-A comprehensive authentication and user management service built with Node.js, Express, TypeScript, and MongoDB. This project has been enhanced through three phases of development to include advanced security features, OAuth integration, and an admin dashboard.
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
 
-## Development Phases
+🔒 **Secure authentication** • 👥 **User management** • 🔑 **JWT tokens** • 📧 **Email verification**
 
-This project was enhanced through three major development phases:
+[Features](#-features) • [Demo](#-demo) • [Installation](#-installation) • [Documentation](#-documentation) • [Tech Stack](#-tech-stack)
 
-### Phase 1: Foundation Upgrade
-- Migrated the codebase to TypeScript
-- Implemented proper user data storage in MongoDB
-- Added comprehensive error handling and logging
-- Set up testing infrastructure
+</div>
 
-### Phase 2: Core Feature Enhancement
-- Added password reset and email verification
-- Implemented OAuth providers (Google, GitHub)
-- Added basic security features
-- Created user profiles with customizable fields
+---
 
-### Phase 3: Advanced Features
-- Implemented Two-Factor Authentication (2FA)
-- Added advanced security features (rate limiting, account locking)
-- Created admin dashboard for user management
-- Implemented user activity tracking and analytics
-- Added session management and security logs
+## ✨ Features
 
-## Features
+<table>
+<tr>
+<td width="50%">
 
-### Core Authentication
+### 🔐 Core Authentication
+- 📝 User registration
+- 🔑 Secure login (JWT)
+- 🔄 Token refresh mechanism
+- 📧 Email verification
+- 🔒 Password reset
+- 🚪 Logout with invalidation
+- ⚡ Auto token refresh
 
-- **User Registration & Login**: Secure registration and login with JWT authentication
-- **Email Verification**: Email verification flow with token generation and verification
-- **Password Management**: Secure password reset flow and password change functionality
-- **JWT Authentication**: Secure token-based authentication with refresh tokens
-- **Role-Based Access Control**: User and admin roles with appropriate permissions
+</td>
+<td width="50%">
 
-### Enhanced Security
+### 🛡️ Security Features
+- 🔐 Bcrypt password hashing
+- 🎫 JWT authentication
+- 🔄 Refresh token rotation
+- ⏱️ Rate limiting
+- 🔒 Account locking
+- 🛡️ CORS protection
+- 🪖 Helmet security headers
 
-- **Two-Factor Authentication**: Optional 2FA using TOTP (Time-based One-Time Password)
-- **Account Locking**: Automatic account locking after multiple failed login attempts
-- **Rate Limiting**: Protection against brute force attacks with rate limiting
-- **XSS Protection**: Protection against cross-site scripting attacks
-- **CSRF Protection**: Protection against cross-site request forgery
-- **Secure Headers**: Helmet middleware for secure HTTP headers
-- **Security Logs**: Comprehensive logging of security events and login attempts
-- **IP-based Blocking**: Blocking suspicious IP addresses
+</td>
+</tr>
+<tr>
+<td width="50%">
 
-### OAuth Integration
+### 👤 User Management
+- 👤 Profile management
+- 📊 Activity logging
+- 🗑️ Account deletion
+- 🎭 Role-based access (RBAC)
+- 📍 IP tracking
+- 🖥️ User agent tracking
 
-- **Google OAuth**: Sign in with Google account
-- **GitHub OAuth**: Sign in with GitHub account
-- **OAuth Profile Linking**: Link multiple OAuth providers to a single account
+</td>
+<td width="50%">
 
-### User Profile Management
+### 👨‍💼 Admin Features
+- 📊 User management dashboard
+- 🔍 Search & pagination
+- 🎭 Role assignment
+- 🔒 Lock/unlock accounts
+- 🗑️ User deletion
+- 📈 System statistics
+- 📝 Activity logs
 
-- **Enhanced User Profiles**: Comprehensive user profile with personal and professional information
-- **Profile Customization**: User-defined profile fields including bio, location, skills, and more
-- **User Preferences**: Customizable user preferences for notifications, theme, and more
-- **Social Links**: Connect multiple social media profiles
-- **Activity History**: Track user login history and account activity
-- **Data Export**: GDPR-compliant user data export functionality
-- **Account Deletion**: Secure account deletion process
+</td>
+</tr>
+</table>
 
-### Admin Dashboard
+---
 
-- **User Management**: Comprehensive user management interface for administrators
-- **User Analytics**: Insights on user registrations, logins, and activity
-- **User Search**: Advanced search and filtering of user accounts
-- **Bulk Actions**: Perform actions on multiple user accounts
-- **Role Management**: Assign and manage user roles and permissions
-- **System Monitoring**: Monitor system health and security events
+## 🎬 Demo
 
-## API Endpoints
+<div align="center">
 
-### Authentication
+### 🖥️ Screenshots
 
-- `POST /api/v1/auth/register`: Register a new user
-- `POST /api/v1/auth/login`: Login user
-- `POST /api/v1/auth/verify-email`: Verify user email
-- `POST /api/v1/auth/resend-verification`: Resend verification email
-- `POST /api/v1/auth/forgot-password`: Request password reset
-- `POST /api/v1/auth/reset-password`: Reset password with token
-- `POST /api/v1/auth/refresh-token`: Refresh JWT token
+| Login Page | User Dashboard | Admin Panel |
+|:----------:|:--------------:|:-----------:|
+| ![Login](https://via.placeholder.com/250x150/4CAF50/FFFFFF?text=Login+Page) | ![Dashboard](https://via.placeholder.com/250x150/2196F3/FFFFFF?text=User+Dashboard) | ![Admin](https://via.placeholder.com/250x150/FF9800/FFFFFF?text=Admin+Panel) |
 
-### OAuth
+</div>
 
-- `GET /api/v1/auth/google`: Initiate Google OAuth flow
-- `GET /api/v1/auth/google/callback`: Google OAuth callback
-- `GET /api/v1/auth/github`: Initiate GitHub OAuth flow
-- `GET /api/v1/auth/github/callback`: GitHub OAuth callback
-- `POST /api/v1/auth/link-oauth`: Link OAuth provider to existing account
-- `POST /api/v1/auth/unlink-oauth`: Unlink OAuth provider from account
+---
 
-### Two-Factor Authentication
+## 🚀 Quick Start
 
-- `POST /api/v1/auth/setup-2fa`: Set up two-factor authentication
-- `POST /api/v1/auth/verify-2fa`: Verify two-factor authentication token
-- `POST /api/v1/auth/disable-2fa`: Disable two-factor authentication
-- `POST /api/v1/auth/generate-backup-codes`: Generate 2FA backup codes
-- `POST /api/v1/auth/verify-backup-code`: Verify 2FA backup code
-
-### User Management
-
-- `GET /api/v1/auth/me`: Get current user information
-- `PATCH /api/v1/auth/update-profile`: Update user profile
-- `PATCH /api/v1/auth/update-preferences`: Update user preferences
-- `PATCH /api/v1/auth/change-password`: Change user password
-- `GET /api/v1/auth/activity`: Get user activity history
-- `POST /api/v1/auth/export-data`: Export user data (GDPR)
-- `DELETE /api/v1/auth/delete-account`: Delete user account
-
-### Session Management
-
-- `GET /api/v1/auth/sessions`: Get all active sessions
-- `DELETE /api/v1/auth/sessions/:id`: Revoke a specific session
-- `DELETE /api/v1/auth/sessions`: Revoke all sessions except current
-
-### Admin Routes
-
-- `GET /api/v1/admin/users`: Get all users with filtering and pagination
-- `GET /api/v1/admin/users/:id`: Get specific user details
-- `PATCH /api/v1/admin/users/:id`: Update user information
-- `DELETE /api/v1/admin/users/:id`: Delete a user
-- `PATCH /api/v1/admin/users/:id/role`: Change user role
-- `POST /api/v1/admin/users/:id/lock`: Lock a user account
-- `POST /api/v1/admin/users/:id/unlock`: Unlock a user account
-- `GET /api/v1/admin/analytics/registrations`: Get user registration analytics
-- `GET /api/v1/admin/analytics/logins`: Get login analytics
-- `GET /api/v1/admin/security/logs`: Get security logs
-- `GET /api/v1/admin/security/blocked-ips`: Get blocked IP addresses
-- `POST /api/v1/admin/security/block-ip`: Block an IP address
-- `DELETE /api/v1/admin/security/unblock-ip`: Unblock an IP address
-
-## Setup and Configuration
-
-### Environment Variables
-
-Create a `.env` file in the root directory with the following variables:
-
-```
-# Server
-PORT=5000
-NODE_ENV=development
-
-# MongoDB
-MONGO_URI=mongodb://localhost:27017/auth-service
-
-# JWT
-JWT_SECRET=your_jwt_secret
-JWT_EXPIRES_IN=15m
-REFRESH_TOKEN_SECRET=your_refresh_token_secret
-REFRESH_TOKEN_EXPIRES_IN=7d
-
-# Email
-EMAIL_FROM=noreply@auth-service.com
-SMTP_HOST=smtp.example.com
-SMTP_PORT=587
-SMTP_USER=your_smtp_username
-SMTP_PASS=your_smtp_password
-FRONTEND_URL=http://localhost:3000
-
-# OAuth
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-GITHUB_CLIENT_ID=your_github_client_id
-GITHUB_CLIENT_SECRET=your_github_client_secret
-
-# Security
-MAX_LOGIN_ATTEMPTS=5
-LOCK_TIME=3600000
-RATE_LIMIT_WINDOW_MS=900000
-RATE_LIMIT_MAX=100
-ENABLE_IP_BLOCKING=true
-CAPTCHA_SECRET=your_captcha_secret
-
-# Admin Dashboard
-ADMIN_DASHBOARD_URL=http://localhost:3001
-```
-
-### Installation
+### 📋 Prerequisites
 
 ```bash
-# Install dependencies
+Node.js 18+  ✅
+MongoDB 6+   ✅
+npm/yarn     ✅
+```
+
+### ⚡ Installation
+
+```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/yourusername/auth-guard.git
+cd auth-guard
+
+# 2️⃣ Setup Backend
+cd backend
 npm install
+cp .env.example .env
+# Edit .env with your configuration
+npm run dev
 
-# Build the project
-npm run build
-
-# Start the server
-npm start
-
-# Start in development mode
+# 3️⃣ Setup Frontend
+cd ../frontend
+npm install
+cp .env.example .env
 npm run dev
 ```
 
-## Project Structure
+### 🌐 Access Application
+
+- 🎨 **Frontend**: http://localhost:5173
+- ⚙️ **Backend API**: http://localhost:5000
+- 💚 **Health Check**: http://localhost:5000/health
+
+---
+
+## 💻 Tech Stack
+
+<div align="center">
+
+### Backend 🔧
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
+![Bcrypt](https://img.shields.io/badge/Bcrypt-003A70?style=for-the-badge&logo=letsencrypt&logoColor=white)
+
+### Frontend 🎨
+
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-000000?style=for-the-badge&logo=react&logoColor=white)
+
+</div>
+
+---
+
+## 📁 Project Structure
 
 ```
-User_Register_Login/
-├── src/                  # TypeScript source files
-│   ├── config/           # Configuration files
-│   ├── controllers/      # Request handlers
-│   ├── db/               # Database connection
-│   ├── errors/           # Custom error classes
-│   ├── interfaces/       # TypeScript interfaces
-│   ├── middleware/       # Express middleware
-│   ├── models/           # Mongoose models
-│   ├── routes/           # API routes
-│   ├── services/         # Business logic services
-│   ├── utils/            # Utility functions
-│   └── app.ts            # Main application file
-├── admin-dashboard/      # Admin dashboard frontend
-├── public/               # Static files
-├── dist/                 # Compiled JavaScript files
-├── logs/                 # Application logs
-├── .env.example          # Example environment variables
-├── tsconfig.json         # TypeScript configuration
-└── package.json          # Project dependencies
+🔐 Auth-Guard/
+├── 📂 backend/                 # Backend API
+│   ├── 📂 src/
+│   │   ├── ⚙️ config/         # Configuration
+│   │   ├── 🎮 controllers/    # Controllers
+│   │   ├── 🗄️ models/         # Database models
+│   │   ├── 🛣️ routes/         # API routes
+│   │   ├── 🔒 middleware/     # Middleware
+│   │   └── 🛠️ utils/          # Utilities
+│   └── 📦 package.json
+│
+├── 📂 frontend/               # React Frontend
+│   ├── 📂 src/
+│   │   ├── 🧩 components/    # Components
+│   │   ├── 📄 pages/         # Pages
+│   │   ├── 🛣️ router/        # Routing
+│   │   ├── 🌐 services/      # API services
+│   │   ├── 💾 store/         # State management
+│   │   └── 📝 types/         # TypeScript types
+│   └── 📦 package.json
+│
+├── 📚 SETUP_GUIDE.md         # Setup guide
+├── 📖 API_REFERENCE.md       # API documentation
+└── 📄 README.md              # This file
 ```
 
-## Security Best Practices
+---
 
-- All passwords are hashed using bcrypt
-- JWT tokens have short expiration times
-- Refresh tokens are used for obtaining new access tokens
-- Two-factor authentication adds an extra layer of security
-- Rate limiting prevents brute force attacks
-- Account locking after multiple failed login attempts
-- XSS and CSRF protection
-- Secure HTTP headers with Helmet
-- Input validation and sanitization
-- IP-based blocking for suspicious activity
-- Comprehensive security logs and audit trails
+## 🎯 Key Features in Detail
 
-## TypeScript Types and Interfaces
+### 🔐 Authentication Flow
+- 🔑 JWT-based authentication
+- 🎫 Access & refresh tokens
+- 🔄 Automatic token refresh
+- 📧 Email verification required
+- 🔒 Secure password reset
+- 🚪 Clean logout process
 
-The project uses TypeScript for type safety. Key interfaces include:
+### 🛡️ Security Measures
+- 🔐 Password hashing (bcrypt, 10 rounds)
+- 🎫 JWT token expiration
+- 🔄 Refresh token rotation
+- ⏱️ Rate limiting (5 req/15min)
+- 🔒 Account locking (5 failed attempts)
+- 🛡️ CORS & Helmet protection
+- ✅ Input validation & sanitization
 
-- `IUser`: User document interface
-- `JwtPayload`: JWT token payload interface
-- `UserProfile`: User profile interface
-- `EmailOptions`: Email sending options interface
-- `SecurityLog`: Security event logging interface
-- `UserActivity`: User activity tracking interface
-- `AdminDashboardStats`: Admin dashboard statistics interface
+### 👥 User Management
+- 👤 Profile CRUD operations
+- 📊 Activity tracking
+- 📍 IP address logging
+- 🖥️ User agent tracking
+- 🎭 Role-based permissions
+- 🗑️ Account deletion
 
-## Error Handling
+### 👨‍💼 Admin Dashboard
+- 📊 User statistics
+- 🔍 Advanced search
+- 📄 Pagination support
+- 🎭 Role management
+- 🔒 Account control
+- 📝 Activity monitoring
 
-Custom error classes for different types of errors:
+---
 
-- `BadRequestError`: For invalid request data
-- `UnauthenticatedError`: For authentication failures
-- `NotFoundError`: For resources not found
-- `TooManyRequestsError`: For rate limiting
-- `ForbiddenError`: For permission issues
-- `ConflictError`: For resource conflicts
+## 🔒 Security Features
 
-## Logging
+### 🔑 Password Requirements
+- ✅ Minimum 8 characters
+- ✅ One uppercase letter
+- ✅ One lowercase letter
+- ✅ One number
+- ✅ One special character (@$!%*?&)
 
-Winston logger for application logging with different log levels based on the environment. Security events are logged separately for audit purposes.
+### ⏱️ Rate Limiting
+- 🌐 General API: 100 req/15min
+- 🔐 Auth endpoints: 5 req/15min
+- 🔒 Password reset: 3 req/hour
+- 📧 Email verification: 3 req/hour
 
-## Testing
+### 🛡️ Account Security
+- 🔒 Auto-lock after 5 failed attempts
+- ⏰ Lock duration: 2 hours
+- 🔐 Bcrypt hashing (10 rounds)
+- 🎫 JWT token expiration
+- 🔄 Refresh token rotation
 
-Comprehensive test suite using Jest and Supertest:
+---
 
-- Unit tests for utilities and services
-- Integration tests for API endpoints
-- Authentication flow tests
-- Security feature tests
+## 📚 API Documentation
 
-## Admin Dashboard
+### 🔐 Authentication Endpoints
 
-The admin dashboard provides a comprehensive interface for managing users and monitoring system activity:
+```http
+POST   /api/auth/register          # Register new user
+POST   /api/auth/login             # Login user
+POST   /api/auth/logout            # Logout user
+POST   /api/auth/refresh-token     # Refresh access token
+POST   /api/auth/forgot-password   # Request password reset
+POST   /api/auth/reset-password    # Reset password
+POST   /api/auth/verify-email      # Verify email address
+```
 
-- User management with filtering and search
-- User analytics and statistics
-- Security logs and monitoring
-- System health metrics
-- Role and permission management
+### 👤 User Endpoints
+
+```http
+GET    /api/users/me               # Get current user
+PATCH  /api/users/me               # Update profile
+PATCH  /api/users/update-password  # Change password
+DELETE /api/users/me               # Delete account
+GET    /api/users/activity         # Get activity log
+```
+
+### 👨‍💼 Admin Endpoints
+
+```http
+GET    /api/admin/users            # Get all users
+GET    /api/admin/users/:id        # Get user by ID
+PATCH  /api/admin/users/:id/role   # Update user role
+PATCH  /api/admin/users/:id/lock   # Lock/unlock account
+DELETE /api/admin/users/:id        # Delete user
+GET    /api/admin/statistics       # Get system stats
+```
+
+For complete API documentation, see [API_REFERENCE.md](./API_REFERENCE.md)
+
+---
+
+## 🧪 Testing
+
+```bash
+# 🔬 Run backend tests
+cd backend
+npm test                    # Run all tests
+npm run test:watch         # Watch mode
+npm run test:coverage      # Coverage report
+
+# 🎨 Run frontend tests
+cd frontend
+npm test                    # Run all tests
+npm run test:ui            # UI mode
+npm run test:coverage      # Coverage report
+```
+
+---
+
+## 📝 Environment Variables
+
+### Backend Configuration
+
+```env
+# Server
+NODE_ENV=development
+PORT=5000
+
+# Database
+MONGODB_URI=mongodb://localhost:27017/auth-guard
+
+# JWT
+JWT_ACCESS_SECRET=your-access-secret-key
+JWT_REFRESH_SECRET=your-refresh-secret-key
+JWT_ACCESS_EXPIRE=15m
+JWT_REFRESH_EXPIRE=7d
+
+# Frontend
+FRONTEND_URL=http://localhost:5173
+
+# Email
+EMAIL_HOST=smtp.mailtrap.io
+EMAIL_PORT=2525
+EMAIL_USER=your-email-user
+EMAIL_PASSWORD=your-email-password
+EMAIL_FROM=noreply@auth-guard.com
+```
+
+### Frontend Configuration
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+---
+
+## 🚀 Deployment
+
+### 🌐 Deployment Options
+
+- ☁️ **Backend**: Railway, Heroku, Render, AWS
+- 🎨 **Frontend**: Vercel, Netlify, AWS S3
+- 🗄️ **Database**: MongoDB Atlas, AWS DocumentDB
+
+### 📦 Build for Production
+
+```bash
+# Backend
+cd backend
+npm run build
+npm start
+
+# Frontend
+cd frontend
+npm run build
+npm run preview
+```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! 🎉
+
+1. 🍴 Fork the repository
+2. 🌿 Create feature branch (`git checkout -b feature/amazing`)
+3. 💾 Commit changes (`git commit -m 'Add amazing feature'`)
+4. 📤 Push to branch (`git push origin feature/amazing`)
+5. 🔀 Open Pull Request
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
-
-```
-MIT License
-
-Copyright (c) 2024 Ajay Krishna
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-**Built with ❤️ by Ajay Krishna**
+## 👨‍💻 Author
 
-*Securing applications, one authentication at a time.*
+**Your Name**
+- 🌐 Website: [yourwebsite.com](https://yourwebsite.com)
+- 💼 LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
+- 🐙 GitHub: [@yourusername](https://github.com/yourusername)
+- 📧 Email: your.email@example.com
+
+---
+
+## 🙏 Acknowledgments
+
+- 💙 React Team for the amazing framework
+- ⚡ Express Team for the web framework
+- 🍃 MongoDB Team for the database
+- 🔐 JWT Team for authentication
+- 🎨 Tailwind CSS for beautiful styling
+
+---
+
+## 📈 Project Stats
+
+![GitHub stars](https://img.shields.io/github/stars/yourusername/auth-guard?style=social)
+![GitHub forks](https://img.shields.io/github/forks/yourusername/auth-guard?style=social)
+![GitHub issues](https://img.shields.io/github/issues/yourusername/auth-guard)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/yourusername/auth-guard)
+
+---
+
+<div align="center">
+
+### 🌟 Star this repo if you find it helpful!
+
+**Made with ❤️ and ☕**
+
+**Version**: 1.0.0 | **Status**: ✅ Production Ready
+
+[⬆ Back to Top](#-auth-guard)
+
+</div>
